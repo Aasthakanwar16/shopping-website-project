@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color:white;
+  color:rgb(11, 11, 11);
+  background-image: url("hc_files/contact.webp");
+  background-size: cover;  /* This makes the background image cover the entire area */
+    background-position: center;  /* This centers the background image */
+    background-repeat: no-repeat;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 19px 36px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+
+
+.navbar h1 {
+  font-size: 32px; /* Increased font size for better visibility */
+  background: linear-gradient(90deg, #ff4081, #ffa500); /* Gradient text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold; /* Made the text bold */
+  letter-spacing: 2px; /* Added letter spacing for a modern look */
+  text-transform: uppercase; /* Transformed text to uppercase */
+  margin: 0;
+  border-bottom: 3px solid #ff4081; /* Added decorative border-bottom */
+  padding-bottom: 5px;
+  transition: transform 0.3s ease; /* Transition for hover effect */
+}
+
+#menu-icon {
+  display: none;
+  font-size: 24px;
+  color: #0a0909;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #0b0a0a;
+  font-size: 16px;
+  
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+  background-color: #ff4081;
+ color: white;
+}
+
+
+@media (max-width: 768px) {
+  #menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color:white;
+  }
+
+  #menu li {
+    margin: 10px 0;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+}
+
+.contact {
+    background: white;
+    text-align: center;
+    font-size: 24px; /* Reduced font size */
+    background-image: url("hc_files/contact.webp"); /* Empty background image */
+    padding: 80px 20px 20px; /* Add additional padding to the top */
+    background-size: cover;  /* This makes the background image cover the entire area */
+    background-position: center;  /* This centers the background image */
+    background-repeat: no-repeat;
+}
+
+.contact .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%; /* Adjusted width */
+    margin: 0 auto;
+    gap: 0.5rem; /* Reduced gap */
+}
+
+.contact .row .form-c h3 {
+    font-size: 1.5rem; /* Reduced font size */
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact .row .form-c input {
+    background: rgb(241, 228, 228);
+    border-radius: 0.3rem; 
+    border: 0.1rem solid var(--main-color); 
+    padding: 6px 10px; 
+    height: 40px; 
+    width: 100%; /* Adjusted width */
+    margin: 0.5rem 0;
+    color: black;
+    font-size: 1rem; 
+}
+
+.contact .row .form-c input[type="submit"] {
+ 
+    cursor: pointer;
+    font-size: 20px; 
+    height: 3rem; /* Reduced height */
+    width: 100%; /* Adjusted width */
+    margin-bottom: 1rem; /* Reduced margin bottom */
+    color: bisque;
+    background-color: black;
+}
+
+.contact .row .form-c input[type="submit"]:hover {
+    background-color: #de2e34;
+}

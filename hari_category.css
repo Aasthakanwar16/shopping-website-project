@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color:rgb(240, 235, 235);
+  color:white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:white;
+  padding: 19px 36px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+
+
+.navbar h1 {
+  font-size: 32px; /* Increased font size for better visibility */
+  background: linear-gradient(90deg, #ff4081, #ffa500); /* Gradient text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold; /* Made the text bold */
+  letter-spacing: 2px; /* Added letter spacing for a modern look */
+  text-transform: uppercase; /* Transformed text to uppercase */
+  margin: 0;
+  border-bottom: 3px solid #ff4081; /* Added decorative border-bottom */
+  padding-bottom: 5px;
+  transition: transform 0.3s ease; /* Transition for hover effect */
+}
+
+
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #0b0a0a;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+  background-color: #ff4081;
+  color: rgb(248, 244, 244);
+}
+
+
+@media (max-width: 768px) {
+
+  nav ul {
+    display: none;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+}
+
+/* Style Category section */
+#Category {
+  padding: 80px 20px 20px;
+}
+
+.head h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: #2b2929;
+}
+
+.category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Use gap for consistent spacing */
+  background-image: url("hc_files/frame.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px; /* Added padding */
+}
+
+.categoryCard {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(33.33% - 20px);
+  max-width: 300px;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center; /* Centered text for better alignment */
+}
+
+.categoryCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.categoryCard img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Improved spacing for images */
+.categoryCard img {
+  margin-bottom: 10px;
+}
+
+/* Responsive styling for category cards */
+@media (max-width: 768px) {
+  .categoryCard {
+    width: 90%;
+    margin: 10px 0;
+  }
+}
